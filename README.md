@@ -49,7 +49,7 @@ This function receive two arguments.
 ]
 ```
 
-*NOTE*: You do need to pay any attention to the number of
+**NOTE**: You don't need to pay any attention to the number of
 questions, just declare them, the template will handle it.
 
 ### Frontmatter
@@ -57,6 +57,8 @@ questions, just declare them, the template will handle it.
 About homework meta data, id, name, edit these in `config.typ`.
 
 ### Compile
+
+#### For single file
 
 In the root directory of the repo, run this command to compile.
 
@@ -66,6 +68,15 @@ $ typst compile workspace/<YOUR_DOC_NAME>.typ --root ..
 
 The output pdf file will be generated in workspace with the
 same name of source code file.
+
+#### For multiple files
+
+All pdf document files will be compiled in `/output` after running
+the command.
+
+```
+$ make
+```
 
 ## Design Principle
 
@@ -113,4 +124,3 @@ or advice in issue.
 If you want to modify code, you should pull a
 request for further contribution. It is better to use **git flow**
 as your contribution standard.
-
