@@ -1,7 +1,7 @@
-#import "../constants/fonts.typ": font_family
-#import "../config.typ": frontmatter
+#import "../../constants/fonts.typ": font_family
+#import "../../config.typ": frontmatter
 
-#let doc_header = [
+#let introduction = [
   #align(left, text(font: font_family.kaiti)[
     算法分析与设计
     _2023_

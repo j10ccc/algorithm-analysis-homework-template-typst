@@ -1,7 +1,7 @@
 #import "constants/fonts.typ": font_family
 #import "config.typ": frontmatter
 #import "layout/divider.typ": divider
-#import "layout/doc_header.typ": doc_header
+#import "layout/headers/index.typ": headers
 #import "layout/question.typ": question
 #import "utils/global_style.typ": *
 
@@ -15,23 +15,7 @@
 
 #show strong: set text(font: font_family.songti, weight: "bold")
 
-#doc_header
-
-#divider
-
-#align(center, [
-  = *习题 #frontmatter.homework_id*
-  #v(16pt)
-])
-
-*提交截止时间 2023.9.11 : 6PM*。请用 LATEX 编辑所有解答。所有问题请给出简洁的回答，任何冗余的回答可能会得低分。提交文件格式为 PDF。
-
-#divider
-
-*姓名:* #frontmatter.name \
-*学号:* #frontmatter.student_number
-
-#divider
+#headers
 
 #question(
   title: [
