@@ -32,7 +32,7 @@ important function `question`.
 
 ### `question` function
 
-This function receive two arguments.
+This function receives two arguments.
 
 | arg | comments |
 |-----|----------|
@@ -47,10 +47,29 @@ This function receive two arguments.
   // question body, if unnecessary, leave it empty
   There is some cases..
 ]
+
+// Type your answer here.
+
+// Create a new page if needed.
+#pagebreak()
 ```
 
 **NOTE**: You don't need to pay any attention to the number of
 questions, just declare them, the template will handle it.
+
+### Code block
+
+If you need to write some code, use
+[codelst](https://github.com/typst/packages/tree/main/packages/preview/codelst).
+
+````typst
+#sourcecode(frame: none)[
+```typst
+hello *world*
+```
+]
+````
+]
 
 ### Frontmatter
 
@@ -116,9 +135,14 @@ in you os.
 
 A real compile example `workspace/ps0.typ` is created.
 
+## Roadmap
+
+- Style
+  - Adjust `raw` block colorset
+
 ## Contribution
 
-You point out all of layout or render logical bugs(if there is)
+You can point out all of layout or render logical bugs(if there is)
 or advice in issue. 
 
 If you want to modify code, you should pull a
