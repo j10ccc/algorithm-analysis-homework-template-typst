@@ -2,10 +2,19 @@
 #import "../layout/question.typ": question
 #import "@preview/codelst:1.0.0": sourcecode
 
-#show: doc => template(doc)
+#let config = (
+  homework_id: [0],
+  date: [2023.9.04],
+  time_consume: [xxx],
+  deadline: [2023.9.24 : 6 PM],
+  intro: [本次习题主要涉及递归算法以及递归函数求解。请用 LATEX 编辑所有解答。所有问题请给出简洁的回答，任何冗余的回答可能会得低分。提交文件格式为 PDF。]
+)
+
+#show: doc => template(doc, config)
 
 // t1
 #question(
+  homework_id: "0",
   title: [
     [10 分]
     给定集合 $A = {i + binom(5, i)|i in ZZ, 0 <= i <= 4}$，集合 $B = {3i|i in {1,2,4,5}}$。

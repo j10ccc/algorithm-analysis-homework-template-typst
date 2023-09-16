@@ -4,7 +4,7 @@
 #import "layout/headers/index.typ": headers
 #import "layout/question.typ": question
 
-#let template(doc) = [
+#let template(doc, config) = [
   // globally override style
   #set text(
     font: font_family.default,
@@ -23,7 +23,7 @@
       ]
       #let title = [
         #text(font: font_family.kaiti)[习题]
-        #emph[#frontmatter.homework_id]
+        #emph[#config.homework_id]
       ]
       #locate(loc => [
         #if loc.page() != 1 [
@@ -53,8 +53,15 @@
     ],
   )
   #show strong: set text(font: font_family.songti, weight: "bold")
+  #show raw: set text(font: font_family.monospace)
 
   // document declaration
-  #headers
+  #headers(
+    homework_id: config.homework_id,
+    date: config.date,
+    deadline: config.deadline,
+    time_consume: config.time_consume,
+    intro: config.intro
+  )
   #doc
 ]

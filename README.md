@@ -37,12 +37,15 @@ This function receives two arguments.
 | arg | comments |
 |-----|----------|
 |`body`| the question body, rendered in the next line after the question title. (maybe it is not exist) |
+|`homework_id`| the number of this homework, it appears like `Question <homework_id>_<question_id>`. this can be omitted. |
 |`title`| the question title, rendered in the same line with the question number. |
 
 ```typst
-#question(title: [
-  // question title
-  Your first problem is that..
+#question(
+  homework_id: "0",
+  title: [
+    // question title
+    Your first problem is that..
 ])[
   // question body, if unnecessary, leave it empty
   There is some cases..
@@ -69,7 +72,6 @@ hello *world*
 ```
 ]
 ````
-]
 
 ### Frontmatter
 
