@@ -27,7 +27,15 @@ important function `question`.
 #import "../main.typ": template
 #import "../layout/question.typ": question
 
-#show: doc => template(doc)
+#let config = (
+  homework_id: [0],
+  date: [2023.9.04],
+  time_consume: [xxx],
+  deadline: [2023.9.24 : 6 PM],
+  intro: [本次习题主要涉及递归算法以及递归函数求解。请用 LATEX 编辑所有解答。所有问题请给出简洁的回答，任何冗余的回答可能会得低分。提交文件格式为 PDF。]
+)
+
+#show: doc => template(doc, config)
 ```
 
 ### `question` function
